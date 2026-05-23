@@ -22,14 +22,23 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_bg[]     = "#000000";  /* black background */
-static const char col_fg[]     = "#c1c1c1";  /* light grey text */
-static const char col_pink[]   = "#dd9999";  /* soft pink accent */
-static const char col_border[] = "#dd9999";  /* pink focused border */
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_fg, col_bg, col_bg },
-	[SchemeSel]  = { col_bg, col_pink,  col_border  },
+/* Gruvbox Dark colours */
+static const char col_bg[]      = "#282828";  /* hard dark bg */
+static const char col_bg1[]     = "#3c3836";  /* bg1 for bar */
+static const char col_fg[]      = "#ebdbb2";  /* light cream fg */
+static const char col_yellow[]  = "#d79921";  /* yellow accent */
+static const char col_orange[]  = "#d65d0e";  /* orange */
+static const char col_red[]     = "#cc241d";  /* red */
+static const char col_green[]   = "#98971a";  /* green */
+static const char col_aqua[]    = "#689d6a";  /* aqua */
+static const char col_blue[]    = "#458588";  /* blue */
+static const char col_purple[]  = "#b16286";  /* purple */
+static const char col_border[]  = "#d79921";  /* yellow focused border */
+
+static const char *colors[][3] = {
+    /*               fg          bg          border      */
+    [SchemeNorm] = { col_fg,     col_bg,     col_bg1     },
+    [SchemeSel]  = { col_bg,     col_purple, col_border  },
 };
 
 /* tagging */
@@ -46,7 +55,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.66; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -79,8 +88,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon,
     "-sb", "#dd9999",
     "-sf", "#000000",
     NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *rofi[] = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL }; 
+static const char *fsel[] = { "kitty", "-t", "launcher", "-e", "fsel", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
