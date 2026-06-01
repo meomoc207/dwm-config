@@ -22,23 +22,16 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-/* Gruvbox Dark colours */
-static const char col_bg[]      = "#282828";  /* hard dark bg */
-static const char col_bg1[]     = "#3c3836";  /* bg1 for bar */
-static const char col_fg[]      = "#ebdbb2";  /* light cream fg */
-static const char col_yellow[]  = "#d79921";  /* yellow accent */
-static const char col_orange[]  = "#d65d0e";  /* orange */
-static const char col_red[]     = "#cc241d";  /* red */
-static const char col_green[]   = "#98971a";  /* green */
-static const char col_aqua[]    = "#689d6a";  /* aqua */
-static const char col_blue[]    = "#458588";  /* blue */
-static const char col_purple[]  = "#b16286";  /* purple */
-static const char col_border[]  = "#d79921";  /* yellow focused border */
+/* Black Metal colour scheme */
+static const char col_bg[]     = "#000000";  /* background */
+static const char col_fg[]     = "#c1c1c1";  /* foreground */
+static const char col_pink[]   = "#dd9999";  /* soft pink accent */
+static const char col_border[] = "#dd9999";  /* focused border */
 
 static const char *colors[][3] = {
     /*               fg          bg          border      */
-    [SchemeNorm] = { col_fg,     col_bg,     col_bg1     },
-    [SchemeSel]  = { col_bg,     col_purple, col_border  },
+    [SchemeNorm] = { col_fg,     col_bg,     col_bg     },
+    [SchemeSel]  = { col_bg,     col_pink, col_border  },
 };
 
 /* tagging */
