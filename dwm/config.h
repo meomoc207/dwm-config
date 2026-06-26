@@ -15,23 +15,23 @@ static const unsigned int systrayspacing = 2;   /* spacing between systray icons
 static const int systraypinningfailfirst = 1;   /* 1: show on first monitor if pinning fails */
 static const int showsystray = 1;               /* 0: no systray */
 static const int systrayonleft = 0;             /* 0: systray on right, 1: systray on left of status text */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=15" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char *fonts[]          = { "Iosevka Nerd Font Mono:size=15" };
+static const char dmenufont[]       = "Iosevka Nerd Font Mono:size=10";
+static const char col_gray1[]       = "#2E383C";  /* bg1 */
+static const char col_gray2[]       = "#414B50";  /* bg3 */
+static const char col_gray3[]       = "#D3C6AA";  /* fg */
+static const char col_gray4[]       = "#D3C6AA";  /* fg bright */
+static const char col_cyan[]        = "#83C092";  /* aqua */
 /* Black Metal colour scheme */
-static const char col_bg[]     = "#000000";  /* background */
-static const char col_fg[]     = "#c1c1c1";  /* foreground */
-static const char col_pink[]   = "#dd9999";  /* soft pink accent */
-static const char col_border[] = "#dd9999";  /* focused border */
+static const char col_bg[]     = "#272E33";  /* background */
+static const char col_fg[]     = "#D3C6AA";  /* foreground */
+static const char col_green[]  = "#A7C080";  /* green accent */
+static const char col_border[] = "#A7C080";  /* focused border */
 
 static const char *colors[][3] = {
     /*               fg          bg          border      */
-    [SchemeNorm] = { col_fg,     col_bg,     col_bg     },
-    [SchemeSel]  = { col_bg,     col_pink, col_border  },
+    [SchemeNorm] = { col_fg,    col_bg,    col_gray2  },
+    [SchemeSel]  = { col_bg,    col_green, col_border },
 };
 
 /* tagging */
@@ -76,15 +76,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon,
     "-fn", dmenufont,
-    "-nb", "#000000",
-    "-nf", "#c1c1c1",
-    "-sb", "#dd9999",
-    "-sf", "#000000",
+    "-nb", "#272E33",
+    "-nf", "#D3C6AA",
+    "-sb", "#A7C080",
+    "-sf", "#272E33",
     NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *rofi[] = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL }; 
-static const char *fsel[] = { "kitty", "-t", "launcher", "-e", "fsel", NULL };
-
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
@@ -143,4 +141,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
