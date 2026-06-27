@@ -1,5 +1,5 @@
---- config.def.h
-+++ config.def.h
+--- config.h
++++ config.h
 @@ -176,8 +176,8 @@ static uint forcemousemod = ShiftMask;
   */
  static MouseShortcut mshortcuts[] = {

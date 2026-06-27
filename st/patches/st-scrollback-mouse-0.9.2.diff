@@ -4,13 +4,13 @@ Date: Mon, 1 Jul 2024 14:00:02 +0200
 Subject: [PATCH] [st][patch] Update st-scrollback-mouse for 0.9.2
 
 ---
- config.def.h | 2 ++
+ config.h | 2 ++
  1 file changed, 2 insertions(+)
 
-diff --git a/config.def.h b/config.def.h
+diff --git a/config.h b/config.h
 index 8b25d40..d259675 100644
---- a/config.def.h
-+++ b/config.def.h
+--- a/config.h
++++ b/config.h
 @@ -176,6 +176,8 @@ static uint forcemousemod = ShiftMask;
   */
  static MouseShortcut mshortcuts[] = {
