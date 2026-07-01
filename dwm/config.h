@@ -15,7 +15,7 @@ static const unsigned int systrayspacing = 2;   /* spacing between systray icons
 static const int systraypinningfailfirst = 1;   /* 1: show on first monitor if pinning fails */
 static const int showsystray = 1;               /* 0: no systray */
 static const int systrayonleft = 0;             /* 0: systray on right, 1: systray on left of status text */
-static const char *fonts[]          = { "Iosevka Nerd Font Mono:size=15" };
+static const char *fonts[]          = { "Go Mono:size=15" };
 static const char dmenufont[]       = "Iosevka Nerd Font Mono:size=10";
 static const char col_gray1[]       = "#2E383C";  /* bg1 */
 static const char col_gray2[]       = "#414B50";  /* bg3 */
@@ -31,7 +31,7 @@ static const char col_border[] = "#A7C080";  /* focused border */
 static const char *colors[][3] = {
     /*               fg          bg          border      */
     [SchemeNorm] = { col_fg,    col_bg,    col_gray2  },
-    [SchemeSel]  = { col_bg,    col_green, col_border },
+    [SchemeSel]  = { col_bg,    col_green, col_gray2 },
 };
 
 /* tagging */
