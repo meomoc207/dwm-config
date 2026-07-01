@@ -31,7 +31,7 @@ static const char col_border[] = "#A7C080";  /* focused border */
 static const char *colors[][3] = {
     /*               fg          bg          border      */
     [SchemeNorm] = { col_fg,    col_bg,    col_gray2  },
-    [SchemeSel]  = { col_bg,    col_green, col_gray2 },
+    [SchemeSel]  = { col_bg,    col_green, col_border },
 };
 
 /* tagging */
@@ -82,10 +82,11 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon,
     "-sf", "#272E33",
     NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *rofi[] = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL }; 
+static const char *rofi[] = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL };
+static const char *dmenu_desktop[] = { "dmenu_run_desktop", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = dmenu_desktop } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
