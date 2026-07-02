@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka NFM:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Iosevka Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 8;
 
 /*
@@ -96,31 +96,31 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
       /* 8 normal colours */
-    "#1E2326",  /* black */
-    "#E67E80",  /* red */
-    "#A7C080",  /* green */
-    "#DBBC7F",  /* yellow */
-    "#7FBBB3",  /* blue */
-    "#D699B6",  /* magenta */
-    "#83C092",  /* cyan */
-    "#D3C6AA",  /* white */
+    "#2b292d",  /* black - Night */
+    "#e06b75",  /* red - Ember */
+    "#b1b695",  /* green - Sage */
+    "#f5d76e",  /* yellow - Honey */
+    "#7FBBB3",  /* blue (not in Ferra palette, kept as-is) */
+    "#f6b6c9",  /* magenta - Rose */
+    "#83C092",  /* cyan (not in Ferra palette, kept as-is) */
+    "#d1d1e0",  /* white - Mist */
 
     /* 8 bright colours */
-    "#414B50",  /* bright black */
-    "#E67E80",  /* bright red */
-    "#A7C080",  /* bright green */
-    "#DBBC7F",  /* bright yellow */
-    "#7FBBB3",  /* bright blue */
-    "#D699B6",  /* bright magenta */
-    "#83C092",  /* bright cyan */
-    "#D3C6AA",  /* bright white */
+    "#4d424b",  /* bright black - Umber */
+    "#e06b75",  /* bright red - Ember */
+    "#b1b695",  /* bright green - Sage */
+    "#f5d76e",  /* bright yellow - Honey */
+    "#7FBBB3",  /* bright blue (not in Ferra palette, kept as-is) */
+    "#f6b6c9",  /* bright magenta - Rose */
+    "#83C092",  /* bright cyan (not in Ferra palette, kept as-is) */
+    "#d1d1e0",  /* bright white - Mist */
 
     [255] = 0,
 
     /* foreground, background, cursor */
-    "#D3C6AA",  /* foreground */
-    "#272E33",  /* background */
-    "#A7C080",  /* cursor — green */
+    "#d1d1e0",  /* foreground - Mist */
+    "#2b292d",  /* background - Night */
+    "#f6b6c9",  /* cursor, Rose */
 };
 
 

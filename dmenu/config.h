@@ -5,16 +5,16 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static int fuzzy = 1;                       /* -F  option; if 0, dmenu doesn't use fuzzy matching */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Iosevka Nerd Font Mono:size=15"
+	"Kosugi:size=15"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#D3C6AA", "#272E33" },
-	[SchemeSel] = { "#272E33", "#A7C080" },
-	[SchemeNormHighlight] = { "#A7C080", "#272E33" },
-	[SchemeSelHighlight] = { "#272E33", "#83C092" },
-	[SchemeOut] = { "#272E33", "#83C092" },
+	[SchemeNorm] = { "#d1d1e0", "#2b292d" },
+	[SchemeSel] = { "#2b292d", "#f6b6c9" },
+	[SchemeNormHighlight] = { "#f6b6c9", "#2b292d" },
+	[SchemeSelHighlight] = { "#2b292d", "#ffa07a" },
+	[SchemeOut] = { "#2b292d", "#ffa07a" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 10;

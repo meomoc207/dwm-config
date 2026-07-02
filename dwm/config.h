@@ -15,18 +15,18 @@ static const unsigned int systrayspacing = 2;   /* spacing between systray icons
 static const int systraypinningfailfirst = 1;   /* 1: show on first monitor if pinning fails */
 static const int showsystray = 1;               /* 0: no systray */
 static const int systrayonleft = 0;             /* 0: systray on right, 1: systray on left of status text */
-static const char *fonts[]          = { "Go Mono:size=15" };
+static const char *fonts[]          = { "Kosugi:size=18" };
 static const char dmenufont[]       = "Iosevka Nerd Font Mono:size=10";
-static const char col_gray1[]       = "#2E383C";  /* bg1 */
-static const char col_gray2[]       = "#414B50";  /* bg3 */
-static const char col_gray3[]       = "#D3C6AA";  /* fg */
-static const char col_gray4[]       = "#D3C6AA";  /* fg bright */
-static const char col_cyan[]        = "#83C092";  /* aqua */
-/* Black Metal colour scheme */
-static const char col_bg[]     = "#272E33";  /* background */
-static const char col_fg[]     = "#D3C6AA";  /* foreground */
-static const char col_green[]  = "#A7C080";  /* green accent */
-static const char col_border[] = "#A7C080";  /* focused border */
+static const char col_gray1[]       = "#383539";  /* bg3 - Ash */
+static const char col_gray2[]       = "#4d424b";  /* border - Umber */
+static const char col_gray3[]       = "#d1d1e0";  /* fg - Mist */
+static const char col_gray4[]       = "#d1d1e0";  /* fg bright - Mist */
+static const char col_cyan[]        = "#ffa07a";  /* secondary accent - Coral */
+/* Ferra colour scheme */
+static const char col_bg[]     = "#2b292d";  /* background - Night */
+static const char col_fg[]     = "#d1d1e0";  /* foreground - Mist */
+static const char col_green[]  = "#f6b6c9";  /* accent - Rose */
+static const char col_border[] = "#f6b6c9";  /* focused border - Rose */
 
 static const char *colors[][3] = {
     /*               fg          bg          border      */
@@ -102,6 +102,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_s,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
